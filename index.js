@@ -274,27 +274,27 @@ function makeSmartPerson(name /* code here */) {
     }
   }
 
-  /**
-   * ### Challenge refactor to arrow functions
-   * 
-   * @instructions
-   * Create arrow function versions of the following commented-out functions:
-   * 
-   * const sum = function (a, b) {
-   *   return a + b
-   * }
-   * 
-   * const addFive = function(num) {
-  *    return num + 5
-   * }
-   *
-   * const argTimesTwo = function (num) {
-   *   return num * 2
-   * }
-  */
-  const sum = null; // code here!
-  const addFive = null; // code here!
-  const argTimesTwo = null; // code here!
+
+  /*### Challenge refactor to arrow functions
+ 
+  @instructions
+  Create arrow function versions of the following commented-out functions:
+  
+ const sum = function (a, b) {
+    return a + b
+  }
+ 
+  const addFive = function(num) {
+    return num + 5
+  }
+ 
+  const argTimesTwo = function (num) {
+    return num * 2
+  }
+*/
+  const sum = (a, b) => { return a + b } // code here!
+  const addFive = (num) => { return num + 5 } // code here!
+  const argTimesTwo = (num) => { return num * 2; } // code here!
 
   /**
    * ### Challenge `carMaker`
@@ -309,30 +309,41 @@ function makeSmartPerson(name /* code here */) {
    *         (1) causes the odometer in the object to be increased by the distance,
    *         (2) returns the updated value of the `odometer`.
   */
-  function carMaker(/* code here */) {
-    /* code here */
+  function carMaker(meter/* code here */) {
+    const object = {
+      odometer: meter,
+      drive: function distance;
+      this.odometer += distance;
+      return this.odometer
+    }
   }
+  return object;
 
-  /// ////// END OF CHALLENGE /////////
-  /// ////// END OF CHALLENGE /////////
-  /// ////// END OF CHALLENGE /////////
-  if (typeof exports !== 'undefined') {
-    // IGNORE: Test/Env Detected
-    // For Node/Non-browser test env
-    module.exports = module.exports || {}
-    if (addNumbers) { module.exports.addNumbers = addNumbers }
-    if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
-    if (getName) { module.exports.getName = getName }
-    if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
-    if (carMaker) { module.exports.carMaker = carMaker }
-    if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
-    if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
-    if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
-    if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
-    if (getModelYears) { module.exports.getModelYears = getModelYears }
-    if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
-    if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
-    if (sum) { module.exports.sum = sum }
-    if (addFive) { module.exports.addFive = addFive }
-    if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
-  }
+  /* code here */
+}
+const car = carMaker(10);
+const dist = this.drive(10);
+
+/// ////// END OF CHALLENGE /////////
+/// ////// END OF CHALLENGE /////////
+/// ////// END OF CHALLENGE /////////
+if (typeof exports !== 'undefined') {
+  // IGNORE: Test/Env Detected
+  // For Node/Non-browser test env
+  module.exports = module.exports || {}
+  if (addNumbers) { module.exports.addNumbers = addNumbers }
+  if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
+  if (getName) { module.exports.getName = getName }
+  if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
+  if (carMaker) { module.exports.carMaker = carMaker }
+  if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
+  if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
+  if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
+  if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
+  if (getModelYears) { module.exports.getModelYears = getModelYears }
+  if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
+  if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
+  if (sum) { module.exports.sum = sum }
+  if (addFive) { module.exports.addFive = addFive }
+  if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
+}
